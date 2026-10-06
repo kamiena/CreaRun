@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>走れ！クレアちゃん 公式サイト｜ラン＆ジャンプ＆クラフトのアクションゲーム</title>
+  <meta name="description" content="走って、飛んで、積み木を集めて…集めた積み木とレシピを使って、乗り物をクラフト！ラン＆ジャンプ＆クラフトのアクションゲーム『走れ！クレアちゃん』の公式サイトです。Steamにて無料配信中。">
+  <meta name="theme-color" content="#fbe193">
+
+  <!-- OGP：公開URLが決まったら og:url / og:image の絶対URLを差し替えてください -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="走れ！クレアちゃん 公式サイト">
+  <meta property="og:title" content="走れ！クレアちゃん 公式サイト">
+  <meta property="og:description" content="走って、飛んで、積み木を集めて…乗り物をクラフト！ラン＆ジャンプ＆クラフトのアクションゲーム。Steamにて無料配信中！">
+  <meta property="og:url" content="https://kamiena.github.io/CreaRun/">
+  <meta property="og:image" content="https://kamiena.github.io/CreaRun/assets/img/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@creaclan_game">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=M+PLUS+Rounded+1c:wght@500;700;800&family=Mochiy+Pop+One&display=swap">
+
+  <link rel="preload" as="image" href="assets/img/logo.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/img/kv-crea-rocket.webp" type="image/webp"
+        imagesrcset="assets/img/kv-crea-rocket-900.webp 900w, assets/img/kv-crea-rocket.webp 1713w"
+        imagesizes="(max-width: 859px) 112vw, 70vw">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "走れ！クレアちゃん",
+    "alternateName": "Crea Run!",
+    "description": "走って、飛んで、積み木を集めて…集めた積み木とレシピを使って、乗り物をクラフト！ラン＆ジャンプ＆クラフトのアクションゲーム。",
+    "genre": ["アクション", "カジュアル", "ラン＆ジャンプ"],
+    "gamePlatform": "PC",
+    "operatingSystem": "Windows",
+    "applicationCategory": "Game",
+    "playMode": "SinglePlayer",
+    "inLanguage": "ja",
+    "datePublished": "2023-08-22",
+    "image": "https://kamiena.github.io/CreaRun/assets/img/ogp.jpg",
+    "author": { "@type": "Organization", "name": "CREA CLAN", "url": "https://sites.google.com/view/creaclan" },
+    "publisher": { "@type": "Organization", "name": "CREA CLAN", "url": "https://sites.google.com/view/creaclan" },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY",
+      "availability": "https://schema.org/InStock",
+      "url": "https://store.steampowered.com/app/2547610/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ================= SVG sprite ================= -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <!-- 積み木（ロゴの ○△□ と同じ配色） -->
+  <symbol id="b-circle" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="17" fill="none" stroke="#fff" stroke-width="8"/>
+    <circle cx="24" cy="24" r="17" fill="var(--f, #fa9aba)" stroke="var(--s, #e04070)" stroke-width="3.5"/>
+    <ellipse cx="17.5" cy="16.5" rx="5" ry="2.8" fill="#fff" opacity=".6" transform="rotate(-35 17.5 16.5)"/>
+  </symbol>
+  <symbol id="b-triangle" viewBox="0 0 48 48">
+    <path d="M24 7 41.5 38H6.5Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M24 7 41.5 38H6.5Z" fill="var(--f, #fbe193)" stroke="var(--s, #c98a2a)" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M21 16.5 16 25.5" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  </symbol>
+  <symbol id="b-square" viewBox="0 0 48 48">
+    <rect x="8" y="8" width="32" height="32" rx="5" fill="none" stroke="#fff" stroke-width="8"/>
+    <rect x="8" y="8" width="32" height="32" rx="5" fill="var(--f, #8adafa)" stroke="var(--s, #0aa3d8)" stroke-width="3.5"/>
+    <path d="M14 15h9" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  </symbol>
+  <symbol id="b-wedge" viewBox="0 0 48 48">
+    <path d="M8 40H40V9Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M8 40H40V9Z" fill="var(--f, #93e3a6)" stroke="var(--s, #35a463)" stroke-width="3.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="b-star" viewBox="0 0 48 48">
+    <path d="M24 4 29.4 17.56 43.98 18.52 32.74 27.84 36.34 41.98 24 34.2 11.66 41.98 15.26 27.84 4.02 18.52 18.6 17.56Z" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M24 4 29.4 17.56 43.98 18.52 32.74 27.84 36.34 41.98 24 34.2 11.66 41.98 15.26 27.84 4.02 18.52 18.6 17.56Z" fill="var(--f, #ffd84d)" stroke="var(--s, #d18f0c)" stroke-width="3" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="b-wood" viewBox="0 0 48 48">
+    <rect x="7" y="7" width="34" height="34" rx="6" fill="none" stroke="#fff" stroke-width="7"/>
+    <rect x="7" y="7" width="34" height="34" rx="6" fill="#f8d888" stroke="#8b2c0c" stroke-width="3"/>
+    <path d="M10 18c4.7-3 9.3 3 14 0s9.3-3 14 0M10 30c4.7-3 9.3 3 14 0s9.3-3 14 0" fill="none" stroke="#fde9b4" stroke-width="3.2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- アイコン -->
+  <symbol id="i-steam" viewBox="0 0 24 24"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path fill="currentColor" d="M4 8h16l-1.2 12.2A2 2 0 0 1 16.8 22H7.2a2 2 0 0 1-2-1.8Z"/><path d="M8.5 10V6.5a3.5 3.5 0 0 1 7 0V10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5 1.8 11.2h3v9.8h5.6v-6.2h3.2V21h5.6v-9.8h3Z"/></symbol>
+  <symbol id="i-mouse" viewBox="0 0 24 24">
+    <rect x="5.5" y="2" width="13" height="20" rx="6.5" fill="#fff" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 2.9a5.6 5.6 0 0 0-5.6 5.6V10H12Z" fill="var(--ml, transparent)"/>
+    <path d="M12 2.9a5.6 5.6 0 0 1 5.6 5.6V10H12Z" fill="var(--mr, transparent)"/>
+    <path d="M12 2.6V10M6 10h12" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="i-keyboard" viewBox="0 0 24 24">
+    <rect x="1.8" y="5.5" width="20.4" height="13" rx="2.6" fill="#fff" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M5.5 9.5h1M9 9.5h1M12.5 9.5h1M16 9.5h2.5M5.5 12.5h1M9 12.5h1M12.5 12.5h1M16 12.5h1M7.5 15.5h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-gamepad" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M7 6.5h10a5 5 0 0 1 4.9 6l-.85 4.3a2.6 2.6 0 0 1-4.6 1.1L15 16H9l-1.45 1.9a2.6 2.6 0 0 1-4.6-1.1l-.85-4.3A5 5 0 0 1 7 6.5Z"/>
+    <path d="M7.5 9.5v4.4M5.3 11.7h4.4" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+    <circle cx="16.2" cy="10.4" r="1.15" fill="#fff"/><circle cx="18.3" cy="12.6" r="1.15" fill="#fff"/>
+  </symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M5 12.5 12 6l7 6.5M5 19l7-6.5 7 6.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V6M6 11.5 12 5.5l6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev-left" viewBox="0 0 24 24"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="1.8" y="6" width="14" height="12" rx="3" fill="currentColor"/><path fill="currentColor" d="M17 10.6 22.2 7.4v9.2L17 13.4Z"/><circle cx="6.4" cy="10.4" r="1.6" fill="#fff"/></symbol>
+  <symbol id="i-burst" viewBox="0 0 24 24"><path fill="currentColor" d="m12 1.8 2.3 5.4 5.9-1.3-2.7 5.2 4.7 3.6-5.8.7-.4 6.1L12 17.6l-4 3.9-.4-6.1-5.8-.7 4.7-3.6-2.7-5.2 5.9 1.3Z"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 22.2 20.6H1.8Z" fill="#ffd84d" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 9.4v5.4" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17.7" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-double" viewBox="0 0 24 24"><path d="M6 11.5 12 5.5l6 6M6 18.5l6-6 6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- ================= Header ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="#top" aria-label="走れ！クレアちゃん トップへ">
+      <img src="assets/img/logo-sm.webp" alt="" width="400" height="176">
+    </a>
+
+    <nav class="gnav" id="gnav" aria-label="メインメニュー">
+      <ul class="gnav__list">
+        <li><a class="gnav__link" href="#about"><span class="gnav__en">ABOUT</span>ゲーム紹介</a></li>
+        <li><a class="gnav__link" href="#howto"><span class="gnav__en">HOW TO PLAY</span>遊び方</a></li>
+        <li><a class="gnav__link" href="#vehicles"><span class="gnav__en">VEHICLES</span>乗り物</a></li>
+        <li><a class="gnav__link" href="#gallery"><span class="gnav__en">SCREENSHOTS</span>ギャラリー</a></li>
+        <li><a class="gnav__link" href="#info"><span class="gnav__en">GAME INFO</span>製品情報</a></li>
+      </ul>
+      <a class="btn btn--steam gnav__steam" href="https://store.steampowered.com/app/2547610/" target="_blank" rel="noopener">
+        <svg class="btn__icon" aria-hidden="true"><use href="#i-steam"/></svg>Steamで無料プレイ
+      </a>
+    </nav>
+
+    <div class="score-hud" id="scoreHud" title="ページ内の★や積み木をタップして集めよう！" aria-hidden="true">
+      <span class="score-hud__label"><svg><use href="#b-star"/></svg>Score</span>
+      <span class="score-hud__value" id="scoreValue">0</span>
+    </div>
+
+    <a class="btn btn--steam btn--sm site-header__steam" href="https://store.steampowered.com/app/2547610/" target="_blank" rel="noopener">
+      <svg class="btn__icon" aria-hidden="true"><use href="#i-steam"/></svg>Steamで遊ぶ
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-controls="gnav" aria-expanded="false">
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-toggle__label">MENU</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= Hero ================= -->
+  <section class="hero" id="top" aria-label="走れ！クレアちゃん">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="hero__deco" aria-hidden="true">
+      <span class="float-block collect" data-pt="50" style="--x:3.5%;--y:80%;--xm:3%;--ym:30%;--r:-12deg;--dur:5.2s;--depth:18"><svg><use href="#b-circle"/></svg></span>
+      <span class="float-block collect" data-pt="50" style="--x:47%;--y:12%;--xm:85%;--ym:29%;--r:10deg;--dur:6s;--depth:26"><svg><use href="#b-triangle"/></svg></span>
+      <span class="float-block float-block--sm collect" data-pt="50" style="--x:91%;--y:16%;--xm:88%;--ym:46%;--r:-8deg;--dur:4.6s;--depth:14"><svg><use href="#b-wedge"/></svg></span>
+      <span class="float-block float-block--sm collect" data-pt="50" style="--x:40%;--y:85%;--xm:7%;--ym:38%;--r:16deg;--dur:5.6s;--depth:22"><svg><use href="#b-square"/></svg></span>
+      <span class="float-star collect float--pc" data-pt="10" style="--x:30%;--y:9.5%;--dur:3.4s;--depth:30"><svg><use href="#b-star"/></svg></span>
+      <span class="float-star collect float--pc" data-pt="10" style="--x:2.5%;--y:32%;--dur:3.9s;--depth:12"><svg><use href="#b-star"/></svg></span>
+      <span class="float-star collect" data-pt="10" style="--x:95%;--y:60%;--xm:91%;--ym:37%;--dur:3.1s;--depth:20"><svg><use href="#b-star"/></svg></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <h1 class="hero__logo">
+          <picture>
+            <source srcset="assets/img/logo.webp" type="image/webp">
+            <img src="assets/img/logo.png" alt="走れ！クレアちゃん" width="1068" height="470">
+          </picture>
+        </h1>
+        <p class="hero__catch">走って、飛んで、積み木を集めて…<br>乗り物をクラフト！</p>
+        <p class="hero__genre">ラン＆ジャンプ＆クラフトのアクションゲーム</p>
+        <ul class="hero__badges">
+          <li class="badge badge--pink">無料で遊べる！</li>
+          <li class="badge badge--blue">Steam配信中</li>
+          <li class="badge badge--yellow">30,000DL突破</li>
+        </ul>
+        <div class="hero__cta">
+          <a class="btn btn--steam btn--lg" href="https://store.steampowered.com/app/2547610/" target="_blank" rel="noopener">
+            <svg class="btn__icon" aria-hidden="true"><use href="#i-steam"/></svg>Steamで無料プレイ
+          </a>
+          <a class="btn btn--ghost" href="#howto">遊び方を見る</a>
+        </div>
+        <p class="hero__platform">対応：Windows（Steam）</p>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__chara">
+          <img src="assets/img/kv-crea-rocket.webp"
+               srcset="assets/img/kv-crea-rocket-900.webp 900w, assets/img/kv-crea-rocket.webp 1713w"
+               sizes="(max-width: 859px) 112vw, 70vw"
+               width="1713" height="1110" alt="積み木のロケットにまたがって元気に飛ぶクレアちゃん" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= News ================= -->
+  <section class="news section--green edge-circle" aria-labelledby="newsTitle">
+    <div class="container">
+      <div class="news__box" data-reveal>
+        <h2 class="news__title" id="newsTitle">NEWS</h2>
+        <ul class="news__list">
+          <li class="news__item">
+            <time datetime="2025-06-14">2025.06.14</time>
+            <a href="https://x.com/creaclan_game/status/1933841850227663332" target="_blank" rel="noopener">『走れ！クレアちゃん』30,000ダウンロード突破！遊んでくださった皆様、本当にありがとうございます！</a>
+          </li>
+          <li class="news__item">
+            <time datetime="2023-08-22">2023.08.22</time>
+            <a href="https://store.steampowered.com/app/2547610/" target="_blank" rel="noopener">Steam版『走れ！クレアちゃん』の配信を開始しました！</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= About ================= -->
+  <section class="section section--green section--after-news" id="about" aria-labelledby="aboutTitle">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="sec-head__collect collect" data-pt="10" aria-hidden="true"><svg><use href="#b-star"/></svg></span>
+        <p class="sec-head__en">ABOUT</p>
+        <h2 class="sec-head__ja" id="aboutTitle">ゲーム紹介</h2>
+        <span class="sec-head__collect sec-head__collect--r collect" data-pt="50" aria-hidden="true"><svg><use href="#b-circle"/></svg></span>
+      </div>
+
+      <div class="about">
+        <div class="about__text" data-reveal>
+          <p class="about__lead">走って、飛んで、積み木を集めて…<br>集めた積み木とレシピを使って、<br class="br-md">乗り物をクラフト！</p>
+          <p>『走れ！クレアちゃん』は、ラン＆ジャンプ＆クラフトのアクションゲーム。</p>
+          <p>乗り物に乗っている間は獲得スコアがUPして、敵も障害物も倒せるように…！<br>たくさんクラフトして、ステージを駆け抜け、一気にスコアを稼ごう！</p>
+        </div>
+        <figure class="about__shot" data-reveal style="--d:.12s">
+          <img src="assets/img/ss-04.webp" width="1280" height="720" loading="lazy" decoding="async" alt="積み木の列車に乗って、スターを集めながらステージを駆け抜けるクレアちゃん">
+          <figcaption>列車に乗ってステージを爆走！</figcaption>
+        </figure>
+      </div>
+
+      <ul class="features">
+        <li class="feature feature--run" data-reveal>
+          <svg class="feature__icon" aria-hidden="true"><use href="#b-circle"/></svg>
+          <h3 class="feature__title"><span class="feature__en">RUN</span><span class="feature__ja">走る</span></h3>
+          <p>ステージを駆け抜けながら、スターや積み木、レシピを集めよう！集めたぶんだけスコアになります。</p>
+        </li>
+        <li class="feature feature--jump" data-reveal style="--d:.1s">
+          <svg class="feature__icon" aria-hidden="true"><use href="#b-triangle"/></svg>
+          <h3 class="feature__title"><span class="feature__en">JUMP</span><span class="feature__ja">跳ぶ</span></h3>
+          <p>ジャンプ中にもう一度ジャンプで2段ジャンプ！ひび割れた床の上でジャンプすると落ちちゃうので要注意…！</p>
+        </li>
+        <li class="feature feature--craft" data-reveal style="--d:.2s">
+          <svg class="feature__icon" aria-hidden="true"><use href="#b-square"/></svg>
+          <h3 class="feature__title"><span class="feature__en">CRAFT</span><span class="feature__ja">作る</span></h3>
+          <p>集めた積み木とレシピで乗り物をクラフト！乗っている間は獲得スコアがUPして、敵も障害物も倒せます。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= How to play ================= -->
+  <section class="section section--cyan edge-triangle" id="howto" aria-labelledby="howtoTitle">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="sec-head__collect collect" data-pt="50" aria-hidden="true"><svg><use href="#b-triangle"/></svg></span>
+        <p class="sec-head__en">HOW TO PLAY</p>
+        <h2 class="sec-head__ja" id="howtoTitle">遊び方</h2>
+        <span class="sec-head__collect sec-head__collect--r collect" data-pt="10" aria-hidden="true"><svg><use href="#b-star"/></svg></span>
+      </div>
+
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <p class="step__num"><span>STEP</span>01</p>
+          <figure class="step__visual">
+            <img src="assets/img/ss-02-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="スターや積み木が並ぶステージをジャンプするクレアちゃん">
+          </figure>
+          <h3 class="step__title">あつめる</h3>
+          <p>ステージを走って、スターや積み木、レシピを集めよう！集めるたびにスコアがアップ。</p>
+        </li>
+        <li class="step" data-reveal style="--d:.1s">
+          <p class="step__num"><span>STEP</span>02</p>
+          <div class="step__visual step__visual--craft" aria-hidden="true">
+            <span class="craft-btn"><span class="craft-btn__inner"><svg><use href="#b-wood"/></svg>CRAFT!</span></span>
+          </div>
+          <h3 class="step__title">クラフトする</h3>
+          <p>左下の「CRAFT！」ボタンはゲージにもなっています。黄色く光ったらクラフトのチャンス！</p>
+        </li>
+        <li class="step" data-reveal style="--d:.2s">
+          <p class="step__num"><span>STEP</span>03</p>
+          <figure class="step__visual">
+            <img src="assets/img/ss-03-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="クラフトした積み木の車に乗って走るクレアちゃん">
+          </figure>
+          <h3 class="step__title">乗り物で駆け抜ける</h3>
+          <p>乗り物に乗っている間は獲得スコアがUP！敵も障害物も倒して、一気にスコアを稼ごう！</p>
+        </li>
+      </ol>
+
+      <!-- 操作方法 -->
+      <div class="panel controls" id="controls" data-reveal>
+        <h3 class="panel__title">操作方法 <small>Steam版（Windows）</small></h3>
+        <div class="controls__grid">
+          <section class="control control--jump" aria-labelledby="ctlJump">
+            <h4 class="control__name" id="ctlJump">ジャンプ</h4>
+            <ul class="control__inputs">
+              <li><svg class="control__icon mouse-l" aria-hidden="true"><use href="#i-mouse"/></svg><span class="control__type">マウス</span><span class="control__key">左クリック</span></li>
+              <li><svg class="control__icon" aria-hidden="true"><use href="#i-keyboard"/></svg><span class="control__type">キーボード</span><kbd class="key key--wide">SPACE</kbd></li>
+              <li><svg class="control__icon" aria-hidden="true"><use href="#i-gamepad"/></svg><span class="control__type">コントローラー</span><span class="pad pad--a">A</span></li>
+            </ul>
+          </section>
+          <section class="control control--double" aria-labelledby="ctlDouble">
+            <h4 class="control__name" id="ctlDouble">2段ジャンプ</h4>
+            <div class="control__double">
+              <svg class="control__double-icon" aria-hidden="true"><use href="#i-double"/></svg>
+              <p>ジャンプ中に<br><strong>もう一度ジャンプ！</strong></p>
+            </div>
+          </section>
+          <section class="control control--craft" aria-labelledby="ctlCraft">
+            <h4 class="control__name" id="ctlCraft">クラフト</h4>
+            <ul class="control__inputs">
+              <li><svg class="control__icon mouse-r" aria-hidden="true"><use href="#i-mouse"/></svg><span class="control__type">マウス</span><span class="control__key">右クリック</span></li>
+              <li><svg class="control__icon" aria-hidden="true"><use href="#i-keyboard"/></svg><span class="control__type">キーボード</span><kbd class="key key--wide">SHIFT</kbd></li>
+              <li><svg class="control__icon" aria-hidden="true"><use href="#i-gamepad"/></svg><span class="control__type">コントローラー</span><span class="pad pad--rb">RB</span></li>
+            </ul>
+          </section>
+        </div>
+        <p class="note">※左下の「CRAFT！」ボタンがゲージにもなっており、黄色く光ったタイミングで「クラフト」を行うことができます！<br>※コントローラーはXInput対応のものをご利用ください。</p>
+      </div>
+
+      <!-- 攻略メモ -->
+      <div class="panel tips" id="tips" data-reveal>
+        <h3 class="panel__title">ゲーム攻略メモ</h3>
+        <ul class="score-items">
+          <li class="score-item collect collect--demo" data-pt="10">
+            <svg class="score-item__icon" aria-hidden="true"><use href="#b-star"/></svg>
+            <span class="score-item__name">スター</span>
+            <span class="score-item__pt">10<small>pt</small></span>
+          </li>
+          <li class="score-item collect collect--demo" data-pt="50">
+            <svg class="score-item__icon" aria-hidden="true"><use href="#b-wood"/></svg>
+            <span class="score-item__name">積み木</span>
+            <span class="score-item__pt">50<small>pt</small></span>
+          </li>
+          <li class="score-item collect collect--demo" data-pt="50">
+            <img class="score-item__icon" src="assets/img/recipe-rocket.webp" width="400" height="400" loading="lazy" decoding="async" alt="">
+            <span class="score-item__name">レシピ</span>
+            <span class="score-item__pt">50<small>pt</small></span>
+          </li>
+        </ul>
+        <ul class="tips__list">
+          <li class="tip">
+            <svg class="tip__icon tip__icon--burst" aria-hidden="true"><use href="#i-burst"/></svg>
+            <p>乗り物に乗ると敵や障害物を倒すことができ、スコアも獲得できます！</p>
+          </li>
+          <li class="tip">
+            <svg class="tip__icon tip__icon--warn" aria-hidden="true"><use href="#i-warn"/></svg>
+            <p>ひび割れた床の上でジャンプすると落ちちゃいます…＞＜</p>
+          </li>
+        </ul>
+        <p class="tips__hint">このページの★や積み木もタップで集められるよ！右上のスコアをチェックしてね♪</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Vehicles ================= -->
+  <section class="section section--pink edge-square" id="vehicles" aria-labelledby="vehiclesTitle">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="sec-head__collect collect" data-pt="10" aria-hidden="true"><svg><use href="#b-star"/></svg></span>
+        <p class="sec-head__en">VEHICLES</p>
+        <h2 class="sec-head__ja" id="vehiclesTitle">乗り物</h2>
+        <span class="sec-head__collect sec-head__collect--r collect" data-pt="50" aria-hidden="true"><svg><use href="#b-square"/></svg></span>
+      </div>
+      <p class="sec-lead" data-reveal>集めた積み木とレシピでクラフトできる乗り物には、<br class="br-md">それぞれ特徴があります！</p>
+
+      <ul class="vehicles">
+        <li class="vehicle vehicle--car" data-reveal>
+          <!-- 仮アイコン：正式な「車のレシピ」素材をいただいたら差し替え -->
+          <img class="vehicle__recipe" src="assets/img/recipe-car.webp" width="400" height="400" loading="lazy" decoding="async" alt="車のレシピ">
+          <p class="vehicle__en">CAR</p>
+          <h3 class="vehicle__name">車</h3>
+          <p class="vehicle__effect"><svg class="vehicle__up" aria-hidden="true"><use href="#i-up"/></svg><span><strong>積み木などの獲得スコア</strong>がUP</span></p>
+        </li>
+        <li class="vehicle vehicle--train" data-reveal style="--d:.08s">
+          <img class="vehicle__recipe" src="assets/img/recipe-train.webp" width="400" height="400" loading="lazy" decoding="async" alt="列車のレシピ">
+          <p class="vehicle__en">TRAIN</p>
+          <h3 class="vehicle__name">列車</h3>
+          <p class="vehicle__effect"><svg class="vehicle__up" aria-hidden="true"><use href="#i-up"/></svg><span><strong>敵を倒したときのスコア</strong>がUP</span></p>
+        </li>
+        <li class="vehicle vehicle--rocket" data-reveal style="--d:.16s">
+          <img class="vehicle__recipe" src="assets/img/recipe-rocket.webp" width="400" height="400" loading="lazy" decoding="async" alt="ロケットのレシピ">
+          <p class="vehicle__en">ROCKET</p>
+          <h3 class="vehicle__name">ロケット</h3>
+          <p class="vehicle__effect"><svg class="vehicle__up" aria-hidden="true"><use href="#i-up"/></svg><span><strong>獲得スコア</strong>と<strong>ジャンプできる回数</strong>がUP</span></p>
+        </li>
+        <li class="vehicle vehicle--mystery" data-reveal style="--d:.24s">
+          <img class="vehicle__recipe" src="assets/img/recipe-mystery.webp" width="400" height="400" loading="lazy" decoding="async" alt="なぞのレシピ">
+          <p class="vehicle__en">???</p>
+          <h3 class="vehicle__name">？？？</h3>
+          <p class="vehicle__effect vehicle__effect--mystery"><span>？？？は………。<br><small>その正体はゲームで確かめてね！</small></span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= Gallery ================= -->
+  <section class="section section--cream edge-circle" id="gallery" aria-labelledby="galleryTitle">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="sec-head__collect collect" data-pt="50" aria-hidden="true"><svg><use href="#b-wedge"/></svg></span>
+        <p class="sec-head__en">SCREENSHOTS</p>
+        <h2 class="sec-head__ja" id="galleryTitle">ギャラリー</h2>
+        <span class="sec-head__collect sec-head__collect--r collect" data-pt="10" aria-hidden="true"><svg><use href="#b-star"/></svg></span>
+      </div>
+
+      <ul class="gallery" id="gallery-list">
+        <li class="gallery__cell" data-reveal>
+          <button class="gallery__item" type="button" data-full="assets/img/ss-01.webp">
+            <img src="assets/img/ss-01-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="タイトル画面。ロケットに乗ったクレアちゃん">
+          </button>
+          <p class="gallery__cap">タイトル画面</p>
+        </li>
+        <li class="gallery__cell" data-reveal style="--d:.06s">
+          <button class="gallery__item" type="button" data-full="assets/img/ss-02.webp">
+            <img src="assets/img/ss-02-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="スターや積み木が並ぶステージをジャンプするクレアちゃん">
+          </button>
+          <p class="gallery__cap">スターや積み木を集めよう</p>
+        </li>
+        <li class="gallery__cell" data-reveal style="--d:.12s">
+          <button class="gallery__item" type="button" data-full="assets/img/ss-03.webp">
+            <img src="assets/img/ss-03-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="積み木の車に乗って走るクレアちゃん">
+          </button>
+          <p class="gallery__cap">車に乗って積み木のスコアUP</p>
+        </li>
+        <li class="gallery__cell" data-reveal style="--d:.18s">
+          <button class="gallery__item" type="button" data-full="assets/img/ss-04.webp">
+            <img src="assets/img/ss-04-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="積み木の列車に乗って走るクレアちゃん">
+          </button>
+          <p class="gallery__cap">列車で敵を倒してスコアUP</p>
+        </li>
+        <li class="gallery__cell" data-reveal style="--d:.24s">
+          <button class="gallery__item" type="button" data-full="assets/img/ss-05.webp">
+            <img src="assets/img/ss-05-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="積み木のロケットに乗って飛ぶクレアちゃん">
+          </button>
+          <p class="gallery__cap">ロケットでジャンプ回数もUP</p>
+        </li>
+        <li class="gallery__cell" data-reveal style="--d:.3s">
+          <button class="gallery__item" type="button" data-full="assets/img/ss-06.webp">
+            <img src="assets/img/ss-06-thumb.webp" width="640" height="360" loading="lazy" decoding="async" alt="リザルト画面。スコアやクラフト回数、倒した敵の数などが表示される">
+          </button>
+          <p class="gallery__cap">リザルト画面</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= Game info ================= -->
+  <section class="section section--wood edge-triangle" id="info" aria-labelledby="infoTitle">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <span class="sec-head__collect collect" data-pt="10" aria-hidden="true"><svg><use href="#b-star"/></svg></span>
+        <p class="sec-head__en">GAME INFO</p>
+        <h2 class="sec-head__ja" id="infoTitle">製品情報</h2>
+        <span class="sec-head__collect sec-head__collect--r collect" data-pt="10" aria-hidden="true"><svg><use href="#b-star"/></svg></span>
+      </div>
+
+      <div class="info">
+        <div class="panel info__card" data-reveal>
+          <h3 class="panel__title">ゲーム情報</h3>
+          <dl class="spec">
+            <div class="spec__row"><dt>タイトル</dt><dd>走れ！クレアちゃん<span class="spec__sub">（Crea Run!）</span></dd></div>
+            <div class="spec__row"><dt>ジャンル</dt><dd>ラン＆ジャンプ＆クラフトのアクションゲーム</dd></div>
+            <div class="spec__row"><dt>配信</dt><dd>Steam（Windows）</dd></div>
+            <div class="spec__row"><dt>配信日</dt><dd>2023年8月22日</dd></div>
+            <div class="spec__row"><dt>価格</dt><dd>無料</dd></div>
+            <div class="spec__row"><dt>プレイ人数</dt><dd>1人</dd></div>
+            <div class="spec__row"><dt>対応言語</dt><dd>日本語</dd></div>
+            <div class="spec__row"><dt>開発・販売</dt><dd>CREA CLAN（クレアクラン）／カミエナ</dd></div>
+          </dl>
+        </div>
+        <div class="panel info__card" data-reveal style="--d:.1s">
+          <h3 class="panel__title">動作環境 <small>最低</small></h3>
+          <dl class="spec">
+            <div class="spec__row"><dt>OS</dt><dd>Windows 7 / 8 / 10 / 11</dd></div>
+            <div class="spec__row"><dt>プロセッサー</dt><dd>Intel Core i5-2400</dd></div>
+            <div class="spec__row"><dt>メモリー</dt><dd>8 GB RAM</dd></div>
+            <div class="spec__row"><dt>グラフィック</dt><dd>NVIDIA GeForce GT 540M</dd></div>
+            <div class="spec__row"><dt>DirectX</dt><dd>Version 10</dd></div>
+            <div class="spec__row"><dt>ストレージ</dt><dd>500 MB の空き容量</dd></div>
+          </dl>
+          <p class="note">※2024年1月1日以降、SteamクライアントはWindows 10以降のバージョンのみをサポートしています。</p>
+        </div>
+      </div>
+
+      <div class="panel streaming" id="streaming" data-reveal>
+        <svg class="streaming__icon" aria-hidden="true"><use href="#i-video"/></svg>
+        <div class="streaming__body">
+          <h3 class="streaming__title">実況・配信について</h3>
+          <p>『走れ！クレアちゃん』は、個人・法人を問わず、どなたでも自由に実況・動画配信していただけます。事前のご連絡は不要です！動画配信プラットフォームの公式機能を利用した収益化もOK。</p>
+          <p>動画のタイトルやポストに「走れ！クレアちゃん」と入れていただけると、とっても嬉しいです♪</p>
+        </div>
+        <a class="btn btn--ghost btn--sm streaming__btn" href="https://sites.google.com/view/creaclan/%E9%85%8D%E4%BF%A1%E8%A6%8F%E7%B4%84" target="_blank" rel="noopener">配信ガイドラインを見る<svg class="btn__icon btn__icon--after" aria-hidden="true"><use href="#i-external"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta" id="download" aria-labelledby="ctaTitle">
+    <div class="cta__bg" aria-hidden="true"></div>
+    <div class="container cta__inner">
+      <div class="cta__copy" data-reveal>
+        <picture>
+          <source srcset="assets/img/logo.webp" type="image/webp">
+          <img class="cta__logo" src="assets/img/logo.png" width="1068" height="470" loading="lazy" decoding="async" alt="走れ！クレアちゃん">
+        </picture>
+        <h2 class="cta__title" id="ctaTitle">さあ、クレアちゃんと一緒に<br class="br-sp">走りだそう！</h2>
+        <a class="btn btn--steam btn--xl" href="https://store.steampowered.com/app/2547610/" target="_blank" rel="noopener">
+          <svg class="btn__icon" aria-hidden="true"><use href="#i-steam"/></svg>Steamで無料プレイ
+        </a>
+        <p class="cta__note">価格：無料 ／ 対応OS：Windows</p>
+      </div>
+      <div class="cta__chara" aria-hidden="true">
+        <img src="assets/img/kv-crea-rocket-900.webp" width="900" height="583" loading="lazy" decoding="async" alt="">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="site-footer__blocks" aria-hidden="true"></div>
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="site-footer__name">CREA CLAN <span>クレアクラン</span></p>
+      <p class="site-footer__desc">kawaiiインディーゲームを制作しているゲーム制作サークルです。</p>
+    </div>
+    <ul class="site-footer__links">
+      <li><a href="https://sites.google.com/view/creaclan" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-home"/></svg>クレアクラン公式HP</a></li>
+      <li><a href="https://x.com/creaclan_game" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-x"/></svg>公式X</a></li>
+      <li><a href="https://www.youtube.com/@CreaClanOfficial" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-youtube"/></svg>公式YouTube</a></li>
+      <li><a href="https://creaclan.booth.pm/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg>公式BOOTH</a></li>
+    </ul>
+    <p class="site-footer__legal">Steam および Steam ロゴは、米国およびその他の国における Valve Corporation の商標または登録商標です。</p>
+    <p class="site-footer__copy"><small>© 2020 CREA CLAN</small></p>
+  </div>
+</footer>
+
+<a class="to-top" id="toTop" href="#top" aria-label="ページの先頭へ戻る">
+  <svg aria-hidden="true"><use href="#i-arrow-up"/></svg><span>TOP</span>
+</a>
+
+<dialog class="lightbox" id="lightbox" aria-label="スクリーンショット">
+  <div class="lightbox__frame">
+    <img class="lightbox__img" id="lightboxImg" src="data:," alt="">
+    <p class="lightbox__cap" id="lightboxCap"></p>
+  </div>
+  <button class="lightbox__btn lightbox__btn--prev" type="button" data-dir="-1" aria-label="前の画像"><svg aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+  <button class="lightbox__btn lightbox__btn--next" type="button" data-dir="1" aria-label="次の画像"><svg aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+  <button class="lightbox__close" type="button" aria-label="閉じる" autofocus><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
