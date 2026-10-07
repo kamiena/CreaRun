@@ -1523,6 +1523,7 @@ body.is-menu-open .gnav {
 }
 .spec dd { font-weight: 700; font-size: 15px; line-height: 1.75; padding-top: 1px; }
 .spec__sub { display: inline-block; font-size: 13px; color: var(--ink-soft); }
+.spec__note { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.65; color: var(--ink-soft); }
 
 @media (min-width: 860px) {
   .info { grid-template-columns: 1fr 1fr; align-items: start; }
