@@ -63,5 +63,5 @@ python3 -m http.server 8000
 
 ## 情報の出典
 
-- クレアクラン公式HP：https://sites.google.com/view/creaclan/works/走れクレアちゃん
+- クレアクラン公式HP：https://kamiena.github.io/CreaClan/#works
 - Steam ストアページ：https://store.steampowered.com/app/2547610/
